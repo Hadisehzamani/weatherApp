@@ -1,0 +1,202 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #614BC3;
+    font-family: 'Playfair Display', serif;
+    height: 100vh;
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container .searching-bar {
+    width: 100%;
+    text-align: center;
+    padding-top: 20px;
+}
+
+.searching-bar input {
+    height: 40px;
+    width: 400px;
+    border-radius: 20px;
+    border: none;
+    padding-left: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+
+.searching-bar button {
+    width: 80px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    background-color: #96B6C5;
+    font-weight: 500;
+    font-size: 15px;
+    cursor: pointer;
+}
+
+.results {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 30px;
+    position: relative;
+}
+
+.results .current-city {
+    background: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+    
+}
+
+.test {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.test .day-city {
+    text-align: center;
+}
+
+.test .day-city .city-name {
+    font-size: 40px;
+}
+
+.test .day-city .date {
+    font-size: 15px;
+}
+
+.test .img-information {
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: space-between;
+    width: 100%;
+    font-family: sans-serif;
+}
+
+.test .img-information .information {
+    padding-left: 30px;
+}
+
+.test .img-information .information .temp {
+    font-size: 60px;
+    margin-top: 10px;
+}
+
+.test .img-information .information .main {
+    font-size: 20px;
+}
+
+.test .img-information .information .humidity {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.test .img-information .information .humidity,
+.test .img-information .information .wind {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.test .img-information .information .humidity img,
+.test .img-information .information .wind img {
+    width: 30px;
+}
+
+.test .img-information .information .wind {
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.test .img-information .information .hi-low {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.archive {
+    display: flex;
+    margin-top: 20px;
+    overflow-x: auto;
+    gap: 10px;
+    font-family: sans-serif;
+    width: 100%;
+}
+
+.archive .item {
+    min-width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    text-align: center;
+    display: inline-block;
+}
+
+.archive .item img {
+    width: 90px;
+}
+
+.archive .item .city-name-archive {
+    font-size: large;
+    font-weight: 500;
+}
+
+.archive .item  .temp-archive {
+    margin-top: 10px;
+}
+
+.archive .item .hi-low {
+    margin-top: 10px;
+}
+
+h1 {
+    margin-top: 10px;
+    text-align: center;
+    display: none;
+}
+
+@media screen and (max-width: 600px) {
+    .test .img-information {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .information {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .img-information .img {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .img-information .img img {
+        width: 140px;
+    }
+
+    .searching-bar button {
+        margin-top: 10px;
+    }
+}
