@@ -25,7 +25,7 @@ async function checkWeather(){
         let dataObj = {
             cityName: data.name,
             temp: Math.round(data.main.temp),
-            img: `images/${data.weather[0].main}.png`,
+            img: `/images/${data.weather[0].main}.png`,
             maxTemp: Math.round(data.main.temp_max),
             minTemp: Math.round(data.main.temp_min)
         }
@@ -75,7 +75,7 @@ function getCurrentWeather(data){
     document.querySelector('.wind-number').innerHTML = data.wind.speed;
     document.querySelector('.main').innerHTML = data.weather[0].main
     let img = document.querySelector('.img img')
-    img.setAttribute('src', `images/${data.weather[0].main}.png`)
+    img.setAttribute('src', `/images/${data.weather[0].main}.png`)
     document.querySelector('.hi-low').innerHTML = Math.round(data.main.temp_min) + '°c' + ' / ' + Math.round(data.main.temp_max) + '°c' ;
 }
 
